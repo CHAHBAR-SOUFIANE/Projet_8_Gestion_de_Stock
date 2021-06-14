@@ -1,5 +1,5 @@
 <?php
-	include('conn.php');
+	include('../conn.php');
 	if(isset($_POST['prix'])){
 		$prix=$_POST['prix'];
 		$model=$_POST['model'];

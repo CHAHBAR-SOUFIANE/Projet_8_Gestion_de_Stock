@@ -14,7 +14,7 @@ $(document).ready(function(){
 			var addForm = $('#addForm').serialize();
 			$.ajax({
 				type: 'POST',
-				url: 'add.php',
+				url: 'api/add.php',
 				data: addForm,
 				success:function(){
 					$('#addnew').modal('hide');
@@ -47,7 +47,7 @@ $(document).ready(function(){
 		var editForm = $('#editForm').serialize();
 		$.ajax({
 			type: 'POST',
-			url: 'edit.php',
+			url: 'api/edit.php',
 			data: editForm + "&id="+id,
 			success:function(){
 				$('#editmem').modal('hide');
@@ -72,7 +72,7 @@ $(document).ready(function(){
 		var id = $(this).val();
 		$.ajax({
 			type: 'POST',
-			url: 'delete.php',
+			url: 'api/delete.php',
 			data: {
 				id: id,
 			},
@@ -90,7 +90,7 @@ $(document).ready(function(){
 function showTable(){
 	$.ajax({
 		type: 'POST',
-		url: 'fetch.php',
+		url: 'api/fetch.php',
 		data: {
 			fetch: 1
 		},
